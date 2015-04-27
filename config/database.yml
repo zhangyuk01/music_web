@@ -1,0 +1,25 @@
+development:
+  adapter: mysql2
+  host: localhost
+  database: blog
+  username: root
+  password:
+  pool: 5
+  timeout: 5000
+test:
+  adapter: mysql2
+  host: localhost
+  database: blog_test
+  username: root
+  password:
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password:
+  database: blog
+  pool: 5
+  timeout: 5000

@@ -1,0 +1,24 @@
+<h1>song</h1>
+<table>
+  <thead>
+    <tr>
+      <th>姓名:</th>
+      <th>性别:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @musics.each do |music| %>
+      <tr>
+        <td><%= music.song_name %></td>
+        <td><%= music.type %></td>
+        <td><%= link_to '显示', music %></td>
+        <td><%= link_to '编辑', edit_music_path(user) %></td>
+        <td><%= link_to '删除', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to '创建用户', new_music_path %>
