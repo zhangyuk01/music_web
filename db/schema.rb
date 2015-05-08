@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150327084212) do
 
-  create_table "flats", force: true do |t|
-    t.string   "flat_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "musics", force: true do |t|
     t.string   "song_name"
     t.string   "type"
