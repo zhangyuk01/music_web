@@ -23,9 +23,11 @@ class SongsController < ApplicationController
   # POST /songs
   def create
     @song = Song.new(song_params)
+    puts "=======new ok ===="
+    @song.save
 
     if @song.save
-      redirect_to @song, notice: 'Song was successfully created.'
+      redirect_to @song
     else
       render :new
     end
@@ -55,6 +57,6 @@ class SongsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def song_params
       params.require(:song).permit(
-        :name, :type, :singer, :img)
+        :name, :song_type, :singer, :img)
     end
 end

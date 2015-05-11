@@ -26,7 +26,7 @@ group :test, :development do
   gem 'net-ssh', '2.7.0'
   gem 'capistrano', '2.12.0'
   gem 'capistrano-rbenv', '1.0.1'
-  gem 'spring', '1.3.4'
+  gem 'spring', '1.3.5'
   gem 'magic_encoding', '0.0.2'
   gem 'rspec-rails', '~> 3.0.0'
 end

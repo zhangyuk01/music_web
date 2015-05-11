@@ -3,7 +3,7 @@ development:
   host: localhost
   database: blog
   username: root
-  password: zy
+  password:
   pool: 5
   timeout: 5000
 test:
@@ -11,7 +11,7 @@ test:
   host: localhost
   database: blog_test
   username: root
-  password: zy
+  password:
   pool: 5
   timeout: 5000
 
@@ -19,7 +19,7 @@ production:
   adapter: mysql2
   host: localhost
   username: root
-  password: zy
+  password:
   database: blog
   pool: 5
   timeout: 5000
