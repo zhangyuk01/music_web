@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>歌曲名称:</th>
+      <th id="th1">歌曲名称:</th>
       <th>歌曲类型:</th>
       <th>歌手:</th>
       <th>上传文件:</th>
@@ -18,9 +18,13 @@
         <td><%= song.song_type %></td>
         <td><%= song.singer %></td>
         <td><%= song.img %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td></td>
+        <td><%= link_to '显示详细内容', song %></td>
+        <td>    </td>
+        <td><%= link_to '编辑', edit_song_path(song) %></td>
+        <td>    </td>
+        <td><%= link_to '删除', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>    </td>
       </tr>
     <% end %>
   </tbody>
