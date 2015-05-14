@@ -1,3 +1,4 @@
+<div class="div_first" style= 'background-image: url("<%= asset_path 'clound.png'%>")'>
 <%= form_for @song do |f| %>
   <% if @song.errors.any? %>
     <div id="error_explanation">
@@ -31,4 +32,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

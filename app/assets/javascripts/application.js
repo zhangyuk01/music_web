@@ -14,3 +14,5 @@
 //= require jquery_ujs
 = require turbolinks
 //= require_tree .
+//= require jquery.slicebox.js
+//= require modernizr.custom.46884.js

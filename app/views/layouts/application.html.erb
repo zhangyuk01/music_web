@@ -12,19 +12,20 @@
     <%= javascript_include_tag "application" %>
 
     <%= javascript_include_tag 'ckeditor/ckeditor.js' %> </head>
-  <body style='background-image: url("<%= asset_path 'back.png'%>")'>
+  <body style='background-image: url("<%= asset_path 'back_ground.png'%>");background-repeat: repeat'>
     <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">北华音乐网</a>
+      <div  style='background-image: url("<%= asset_path 'title.png'%>");font-color:white'>
+        <a class="navbar-brand" style="color:white;  href="/">北华音乐网</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
 
           <ul class="nav navbar-nav">
-            <li><%= link_to "用户管理", "/"%></li>
-            <li><%= link_to "音乐咨询", musics_path%></li>
-            <li><%= link_to "上传歌曲", songs_path%></li>
-            <li><%= link_to "下载音乐", "/"%></li>
-            <li><%= link_to "系统设置", "/"%></li>
-            <li><%= link_to "注册会员", "/"%></li>
+            <li><%= link_to "在线音乐", "/",style:'color:#FFFFFF'%></li>
+            <li><%= link_to "用户管理", "/",style:'color:#FFFFFF'%></li>
+            <li><%= link_to "音乐咨询", musics_path, style: 'color:#FFFFFF'%></li>
+            <li><%= link_to "上传歌曲", songs_path,style:'color:#FFFFFF'%></li>
+            <li><%= link_to "下载音乐", "/",style:'color:#FFFFFF'%></li>
+            <li><%= link_to "系统设置", "/",style:'color:#FFFFFF'%></li>
+            <li><%= link_to "注册会员", "/",style:'color:#FFFFFF'%></li>
           </ul>
         </div>
       </div>

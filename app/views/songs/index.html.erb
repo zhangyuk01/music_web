@@ -10,6 +10,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+  <% name = 'dashi' %>
+  <% another_name = "#{name} lalala" %>
+  <%= name %>, <%= another_name %>
 
   <tbody>
     <% @songs.each do |song| %>
@@ -24,7 +27,25 @@
         <td><%= link_to '编辑', edit_song_path(song) %></td>
         <td>    </td>
         <td><%= link_to '删除', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td>    </td>
+        <td>
+          <!--
+          <%= audio_tag "#{song.img}"%>
+        <audio controls>
+        <source src="song.img.to_s.split("/")[3]" type="audio/mpeg">
+        Hello,world
+        </audio>
+        -->
+
+        <audio controls>
+        <!--
+        <source src="/public/uploads/qingchun.mp3" type="audio/mpeg">
+        -->
+        <source src="<%= song.img %>" type="audio/mpeg">
+        Hello,world
+        </audio>
+        <p><%= song.img.to_s.split("/")[3] %></p>
+      <br/>
+        </td>
       </tr>
     <% end %>
   </tbody>
