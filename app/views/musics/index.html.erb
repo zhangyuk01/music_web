@@ -1,5 +1,22 @@
-<h1>歌曲列表</h1>
-<table>
+  <div style='background-image: url("<%= asset_path 'flower_back.jpg'%>");width:100%;height:120%'>
+    <div style='background-image: url("<%= asset_path 'yemei.jpg'%>");width:100%;height:7%;text-align:center' >
+      <label style="font-size:30px;float:left;padding:20px">北华音乐网 </label>
+      <%= link_to '音乐资讯',musics_path,style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '用户管理',users_path,style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '上传歌曲',songs_path,style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '下载音乐','/',style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '系统设置','/',style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '管理员','/',style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+      <%= link_to '注册会员','/',style:'color:#999999;float:left;padding:30px;font-size:20px' %>
+    </div>
+    <div style="text-align:center">
+<h1 style="color:green;font-size:20px;padding:10px">更多好听的音乐,尽在yy.zhangyu.today</h1>
+  <%= form_tag musics_path,method:'get' do |f| %>
+  <%=text_field_tag :search, params[:search],placeholder:'歌曲名称'%>
+  <%=submit_tag '查询歌曲', class: 'btn btn-primary' %><br/>
+  <%end%>
+  </div>
+<table class="table table-hoover">
   <thead>
     <tr>
       <th>姓名:</th>
@@ -32,5 +49,11 @@
   </tbody>
 </table>
 <br>
+   <div style="background-color:red;width:500px;height:500px" >
 
+   </div>
+   <div>
+
+   </div>
 <%= link_to '添加歌曲', new_music_path %>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511101145) do
+ActiveRecord::Schema.define(version: 20150517142607) do
 
   create_table "musics", force: true do |t|
     t.string   "song_name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150511101145) do
     t.string   "img"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "music_id"
   end
 
   create_table "table_versions", force: true do |t|

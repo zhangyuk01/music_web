@@ -1,7 +1,8 @@
 class MusicsController < ApplicationController
  #the action
  def index
-  @musics=Music.all
+  @musics = Music.where('song_name like ?',"%#{params[:search]}%").all
+  render layout:false
  end
 
  def show

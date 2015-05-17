@@ -10,9 +10,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <% name = 'dashi' %>
-  <% another_name = "#{name} lalala" %>
-  <%= name %>, <%= another_name %>
 
   <tbody>
     <% @songs.each do |song| %>
@@ -47,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New Song', new_song_path %>
+<%= link_to '上传歌曲', new_song_path %>
