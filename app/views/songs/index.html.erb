@@ -28,22 +28,16 @@
         <td>    </td>
         <td><%= link_to '删除', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td>
-          <!--
-          <%= audio_tag "#{song.img}"%>
+        <!--
         <audio controls>
-        <source src="song.img.to_s.split("/")[3]" type="audio/mpeg">
-        Hello,world
+           <source src="song.img.to_s.split("/")[3]" type="audio/mpeg">
+            Hello,world
         </audio>
         -->
 
         <audio controls>
-        <!--
-        <source src="/public/uploads/qingchun.mp3" type="audio/mpeg">
-        -->
-        <source src="<%= song.img %>" type="audio/mpeg">
-        Hello,world
+         <source src="<%= song.img %>" type="audio/mpeg">
         </audio>
-        <p><%= song.img.to_s.split("/")[3] %></p>
       <br/>
         </td>
       </tr>

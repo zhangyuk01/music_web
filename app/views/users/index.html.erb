@@ -1,4 +1,8 @@
 <h1>用户列表</h1>
+  <%= form_tag users_path,method:'get' do |f| %>
+  <%=text_field_tag :search, params[:search],placeholder:'用户姓名'%>
+  <%=submit_tag '查询', class: 'btn btn-primary' %><br/>
+  <%end%>
 <table>
   <thead>
     <tr>
